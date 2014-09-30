@@ -82,6 +82,8 @@ Bundle 'guns/vim-clojure-static'
 Bundle 'wavded/vim-stylus'
 Bundle 'tpope/vim-fireplace'
 Bundle 'flazz/vim-colorschemes'
+Bundle 'mxw/vim-jsx'
+Bundle 'pangloss/vim-javascript'
 " vim-scripts repos
 Bundle 'L9'
 Bundle 'FuzzyFinder'
