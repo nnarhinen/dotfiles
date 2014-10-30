@@ -84,6 +84,7 @@ Bundle 'tpope/vim-fireplace'
 Bundle 'flazz/vim-colorschemes'
 Bundle 'mxw/vim-jsx'
 Bundle 'pangloss/vim-javascript'
+Bundle 'scrooloose/syntastic'
 " vim-scripts repos
 Bundle 'L9'
 Bundle 'FuzzyFinder'
@@ -96,6 +97,8 @@ Bundle 'git://git.wincent.com/command-t.git'
 filetype plugin indent on     " required!
 
 let s:rootDir = fnamemodify(expand("<sfile>"), ":h")
+
+let g:syntastic_javascript_checkers = ['jsxhint']
 
 nmap <silent> <Leader>rcrr :call RunRubyCurrentFileConque()<CR>
 nmap <silent> <Leader>rcss :call RunRspecCurrentFileConque()<CR>
