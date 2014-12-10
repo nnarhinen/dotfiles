@@ -85,6 +85,8 @@ Bundle 'flazz/vim-colorschemes'
 Bundle 'mxw/vim-jsx'
 Bundle 'pangloss/vim-javascript'
 Bundle 'scrooloose/syntastic'
+Bundle 'peterhoeg/vim-qml'
+Bundle 'kennethzfeng/vim-raml'
 " vim-scripts repos
 Bundle 'L9'
 Bundle 'FuzzyFinder'
@@ -125,10 +127,14 @@ let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_working_path_mode = 'rc'
 
+let g:jsx_ext_required = 0
+let g:jsx_pragma_required = 0
+
 syntax enable
 set autoindent cindent smartindent
 
 autocmd BufNewFile,BufRead *.coffee set filetype=coffee
+autocmd BufNewFile,BufRead *.qml set filetype=qml
 autocmd BufNewFile,BufReadPost *.jade set filetype=jade
 autocmd BufNewFile,BufRead *.clj,*.cljs set filetype=clojure
 autocmd BufNewFile,BufRead *.less setf less
