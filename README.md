@@ -9,9 +9,9 @@ VIM
 
 Install some dependencies
 
-### jsxhint
+### eslint
 
-`npm install -g jsxhint`
+`npm install -g eslint eslint-plugin-react``
 
 ### html5 tidy
 
