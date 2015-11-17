@@ -67,31 +67,21 @@ Bundle 'gmarik/vundle'
 "
 " original repos on github
 Bundle 'tpope/vim-fugitive'
-Bundle 'Lokaltog/vim-easymotion'
-Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
-Bundle 'tpope/vim-rails.git'
 Bundle 'scrooloose/nerdtree'
-Bundle 'basepi/vim-conque'
-Bundle 'skwp/vim-ruby-conque'
 Bundle 'kien/ctrlp.vim'
 Bundle 'groenewege/vim-less'
 Bundle 'digitaltoad/vim-jade'
 Bundle 'nono/vim-handlebars'
 Bundle 'ervandew/supertab'
-Bundle 'guns/vim-clojure-static'
 Bundle 'wavded/vim-stylus'
-Bundle 'tpope/vim-fireplace'
-Bundle 'flazz/vim-colorschemes'
-Bundle 'mxw/vim-jsx'
 Bundle 'pangloss/vim-javascript'
+Bundle 'mxw/vim-jsx'
 Bundle 'scrooloose/syntastic'
-Bundle 'peterhoeg/vim-qml'
 Bundle 'kennethzfeng/vim-raml'
 " vim-scripts repos
 Bundle 'L9'
 Bundle 'FuzzyFinder'
 Bundle 'vim-coffee-script'
-Bundle 'haskell.vim'
 " non github repos
 Bundle 'git://git.wincent.com/command-t.git'
 " ...
@@ -101,23 +91,6 @@ filetype plugin indent on     " required!
 let s:rootDir = fnamemodify(expand("<sfile>"), ":h")
 
 let g:syntastic_javascript_checkers = ['eslint']
-
-nmap <silent> <Leader>rcrr :call RunRubyCurrentFileConque()<CR>
-nmap <silent> <Leader>rcss :call RunRspecCurrentFileConque()<CR>
-nmap <silent> <Leader>rcll :call RunRspecCurrentLineConque()<CR>
-nmap <silent> <Leader>rccc :call RunCucumberCurrentFileConque()<CR>
-nmap <silent> <Leader>rccl :call RunCucumberCurrentLineConque()<CR>
-nmap <silent> <Leader>rcRR :call RunRakeConque()<CR>
-nmap <silent> <Leader>rcrl :call RunLastConqueCommand()<CR>
-
-nnoremap <silent> <C-s> :call RelatedSpecVOpen()<CR>
-nnoremap <silent> ,<C-s> :call RelatedSpecOpen()<CR>
-" Cmd-Shift-R for RSpec
-nmap <silent> <D-R> :call RunRspecCurrentFileConque()<CR>
-" " Cmd-Shift-L for RSpec Current Line
-nmap <silent> <D-L> :call RunRspecCurrentLineConque()<CR>
-" " ,Cmd-R for Last conque command
-nmap <silent> ,<D-R> :call RunLastConqueCommand()<CR>
 
 if filereadable(expand("~/.vimrc.before"))
   source ~/.vimrc.before
@@ -134,15 +107,14 @@ syntax enable
 set autoindent cindent smartindent
 
 autocmd BufNewFile,BufRead *.coffee set filetype=coffee
-autocmd BufNewFile,BufRead *.qml set filetype=qml
 autocmd BufNewFile,BufReadPost *.jade set filetype=jade
-autocmd BufNewFile,BufRead *.clj,*.cljs set filetype=clojure
 autocmd BufNewFile,BufRead *.less setf less
 autocmd BufNewFile,BufRead *.styl setf stylus
 if has("autocmd")
   au BufNewFile,BufRead *.handlebars,*.hbs,*.hb set filetype=handlebars
 endif
 autocmd BufNewFile,BufRead *.ts set filetype=typescript
+autocmd BufNewFile,BufRead *.js set filetype=javascript.jsx
 
 noremap <Left> :tabp<CR>
 noremap <Right> :tabn<CR>
@@ -150,10 +122,7 @@ noremap <Right> :tabn<CR>
 
 "" GVIM
 if has('gui_running')
-  colorscheme desert
   set guifont="Source Code Pro Medium 10"
-else
-  colorscheme bluegreen
 endif
 
 " Brief help
