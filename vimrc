@@ -100,7 +100,7 @@ filetype plugin indent on     " required!
 
 let s:rootDir = fnamemodify(expand("<sfile>"), ":h")
 
-let g:syntastic_javascript_checkers = ['jsxhint']
+let g:syntastic_javascript_checkers = ['eslint']
 
 nmap <silent> <Leader>rcrr :call RunRubyCurrentFileConque()<CR>
 nmap <silent> <Leader>rcss :call RunRspecCurrentFileConque()<CR>
