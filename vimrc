@@ -78,6 +78,7 @@ Bundle 'pangloss/vim-javascript'
 Bundle 'mxw/vim-jsx'
 Bundle 'scrooloose/syntastic'
 Bundle 'kennethzfeng/vim-raml'
+Bundle "goatslacker/mango.vim"
 " vim-scripts repos
 Bundle 'L9'
 Bundle 'FuzzyFinder'
@@ -123,7 +124,11 @@ noremap <Right> :tabn<CR>
 "" GVIM
 if has('gui_running')
   set guifont="Source Code Pro Medium 10"
+  set background=light
+else
+  set background=dark
 endif
+colorscheme mango
 
 " Brief help
 " :BundleList          - list configured bundles
