@@ -46,7 +46,7 @@ set incsearch   " incremental searching
 set ignorecase  " searches are case insensitive...
 set smartcase   " ... unless they contain at least one capital letter
 
-set wildignore+=*.o,*.out,*.obj,.git,*.rbc,*.rbo,*.class,.svn,*.gem
+set wildignore+=*.o,*.out,*.obj,.git,*.rbc,*.rbo,*.class,.svn,*.gem,node_modules
 set wildignore+=*.zip,*.tar.gz,*.tar.bz2,*.rar,*.tar.xz
 set wildignore+=*/vendor/gems/*,*/vendor/cache/*,*/.bundle/*,*/.sass-cache/*
 set wildignore+=*.swp,*~,._*
@@ -115,7 +115,7 @@ if has("autocmd")
   au BufNewFile,BufRead *.handlebars,*.hbs,*.hb set filetype=handlebars
 endif
 autocmd BufNewFile,BufRead *.ts set filetype=typescript
-autocmd BufNewFile,BufRead *.js set filetype=javascript.jsx
+autocmd BufNewFile,BufRead *.js,*.jsx set filetype=javascript.jsx
 
 noremap <Left> :tabp<CR>
 noremap <Right> :tabn<CR>
