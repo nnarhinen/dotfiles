@@ -79,6 +79,7 @@ Bundle 'mxw/vim-jsx'
 Bundle 'scrooloose/syntastic'
 Bundle 'kennethzfeng/vim-raml'
 Bundle "goatslacker/mango.vim"
+Bundle "suan/vim-instant-markdown"
 " vim-scripts repos
 Bundle 'L9'
 Bundle 'FuzzyFinder'
@@ -111,6 +112,7 @@ autocmd BufNewFile,BufRead *.coffee set filetype=coffee
 autocmd BufNewFile,BufReadPost *.jade set filetype=jade
 autocmd BufNewFile,BufRead *.less setf less
 autocmd BufNewFile,BufRead *.styl setf stylus
+autocmd BufNewFile,BufRead *.md setf markdown
 if has("autocmd")
   au BufNewFile,BufRead *.handlebars,*.hbs,*.hb set filetype=handlebars
 endif

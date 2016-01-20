@@ -15,7 +15,10 @@
         "semi": [
             2,
             "always"
-        ]
+        ],
+        "react/jsx-uses-react": 1,
+        "react/jsx-no-undef": 1,
+        "react/no-unknown-property": 1
     },
     "env": {
         "es6": true,
