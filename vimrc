@@ -1,8 +1,8 @@
 set nocompatible               " be iMproved
 filetype off                   " required!
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
 
 
@@ -61,32 +61,35 @@ set directory=~/.vim/_temp//      " where to put swap files.
 
 " let Vundle manage Vundle
 " required! 
-Bundle 'gmarik/vundle'
+Plugin 'VundleVim/Vundle.vim'
 
-" My Bundles here:
+" My Plugins here:
 "
 " original repos on github
-Bundle 'tpope/vim-fugitive'
-Bundle 'scrooloose/nerdtree'
-Bundle 'kien/ctrlp.vim'
-Bundle 'groenewege/vim-less'
-Bundle 'digitaltoad/vim-jade'
-Bundle 'nono/vim-handlebars'
-Bundle 'ervandew/supertab'
-Bundle 'wavded/vim-stylus'
-Bundle 'pangloss/vim-javascript'
-Bundle 'mxw/vim-jsx'
-Bundle 'scrooloose/syntastic'
-Bundle 'kennethzfeng/vim-raml'
-Bundle "goatslacker/mango.vim"
-Bundle "suan/vim-instant-markdown"
+Plugin 'tpope/vim-fugitive'
+Plugin 'scrooloose/nerdtree'
+Plugin 'kien/ctrlp.vim'
+Plugin 'groenewege/vim-less'
+Plugin 'digitaltoad/vim-jade'
+Plugin 'nono/vim-handlebars'
+Plugin 'ervandew/supertab'
+Plugin 'wavded/vim-stylus'
+Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
+Plugin 'scrooloose/syntastic'
+Plugin 'kennethzfeng/vim-raml'
+Plugin 'goatslacker/mango.vim'
+Plugin 'suan/vim-instant-markdown'
+Plugin 'tpope/vim-sleuth'
 " vim-scripts repos
-Bundle 'L9'
-Bundle 'FuzzyFinder'
-Bundle 'vim-coffee-script'
+Plugin 'L9'
+Plugin 'FuzzyFinder'
+Plugin 'vim-coffee-script'
 " non github repos
-Bundle 'git://git.wincent.com/command-t.git'
+Plugin 'git://git.wincent.com/command-t.git'
 " ...
+"
+call vundle#end()
 
 filetype plugin indent on     " required!
 
@@ -133,10 +136,10 @@ endif
 colorscheme mango
 
 " Brief help
-" :BundleList          - list configured bundles
-" :BundleInstall(!)    - install(update) bundles
-" :BundleSearch(!) foo - search(or refresh cache first) for foo
-" :BundleClean(!)      - confirm(or auto-approve) removal of unused bundles
+" :PluginList          - list configured bundles
+" :PluginInstall(!)    - install(update) bundles
+" :PluginSearch(!) foo - search(or refresh cache first) for foo
+" :PluginClean(!)      - confirm(or auto-approve) removal of unused bundles
 "
 " see :h vundle for more details or wiki for FAQ
-" NOTE: comments after Bundle command are not allowed..
+" NOTE: comments after Plugin command are not allowed..
